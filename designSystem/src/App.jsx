@@ -11,6 +11,8 @@ import { Home } from "./Pages/Home";
 import { Contact } from "./Pages/Contact";
 import { useToggle } from "./hooks/useToggle.js"
 import { activeClassIf } from "./utils/classnames.js"
+
+import "./../dist/styles/style.css"
 const router = createBrowserRouter([
   {
     path: "/",
@@ -50,7 +52,7 @@ function Root({ page }) {
       <header>
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
-            <NavLink className="navbar-brand" to="/home">MonSite</NavLink>
+            <NavLink className="navbar-brand" to="/home">Design system</NavLink>
             <button
               onClick={toggleExpanded}
               className="navbar-toggler"
