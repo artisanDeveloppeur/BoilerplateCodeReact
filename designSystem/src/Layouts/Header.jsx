@@ -29,13 +29,10 @@ export function Header({ page }) {
           >
             <ul className="navbar-nav">
               <li className="nav-item">
-
                 <NavLink className={activeClassIf(page === 'home', 'nav-link')} aria-current="page" to="/home">Home</NavLink>
               </li>
               <li className="nav-item">
-
                 <NavLink className={activeClassIf(page === 'contact', 'nav-link')} to="/contact">Contact</NavLink>
-
               </li>
             </ul>
           </div>
