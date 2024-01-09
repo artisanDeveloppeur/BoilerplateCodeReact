@@ -12,7 +12,7 @@
 //BREAKPOINTS-----------------------------------
 $screen-sizes: (
   "xs": ("breakpoint": 0,
-    "container-size": 100%,
+    "container-size": 90%,
   ),
   "sm": ("breakpoint": 576px,
     "container-size": 90%,
@@ -21,7 +21,7 @@ $screen-sizes: (
     "container-size": 90%,
   ),
   "lg": ("breakpoint": 992px,
-    "container-size": 80%,
+    "container-size": 90%,
   ),
   "xl": ("breakpoint": 1200px,
     "container-size": 80%,
@@ -79,11 +79,11 @@ $values in $screen-sizes {
     }
 
     @for $i from 1 through 12 {
-      .col-#{$size}-#{$i} {
+      .DGcol-#{$size}-#{$i} {
         grid-column: span + " " + $i;
       }
 
-      .row-#{$size}-#{$i} {
+      .DGrow-#{$size}-#{$i} {
         grid-row: span + " " + $i;
       }
     }
