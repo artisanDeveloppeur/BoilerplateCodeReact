@@ -5,13 +5,13 @@ h4,
 h5,
 h6 {
   //font-family: Montserrat;
+  font-family: 'Roboto', sans-serif;
 }
 
 
 
 h1,
 .h1 {
-  font-family: Montserrat;
   font-size: 3.5rem;
   font-style: normal;
   letter-spacing: 4px;
@@ -24,13 +24,10 @@ h1,
 
 h1>strong,
 h2>strong,
-p>strong {
-  color: var(--main-color);
-}
+p>strong {}
 
 h2,
 .h2 {
-  font-family: Montserrat;
   font-size: 2.5rem;
   font-style: normal;
   height: auto;
@@ -40,42 +37,33 @@ h2,
 }
 
 .subtitle {
-  &__services {
-    display: grid;
-    justify-content: center;
-    margin-block: 0.5em -0.5rem;
-    margin-block: 1.5em 1.5rem;
-  }
+  color: var(--grey);
+  margin-block: 0.5em -0.5rem;
+  margin-block: 1.5em 1.5rem;
+
 }
 
 h3,
 .h3 {
-  font-family: 'Roboto',
-    sans-serif;
-  font-size: 1.5rem;
+
+  font-size: 1.75rem;
 
 }
 
 h4,
 .h4 {
-  font-family: 'Roboto',
-    sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 
 }
 
 h5,
 .h5 {
-  font-family: 'Roboto',
-    sans-serif;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
 }
 
 h6,
 .h6 {
-  font-family: 'Roboto',
-    sans-serif;
-  font-size: 1rem;
+  font-size: 1.15rem;
 }
 
 p {
