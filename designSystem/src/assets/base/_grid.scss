@@ -79,11 +79,11 @@ $values in $screen-sizes {
     }
 
     @for $i from 1 through 12 {
-      .DGcol-#{$size}-#{$i} {
+      .gcol-#{$size}-#{$i} {
         grid-column: span + " " + $i;
       }
 
-      .DGrow-#{$size}-#{$i} {
+      .grow-#{$size}-#{$i} {
         grid-row: span + " " + $i;
       }
     }

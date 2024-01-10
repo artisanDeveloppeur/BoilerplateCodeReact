@@ -296,76 +296,76 @@ p {
     max-width: 90%;
     margin: auto;
   }
-  .DGcol-xs-1 {
+  .gcol-xs-1 {
     grid-column: span 1;
   }
-  .DGrow-xs-1 {
+  .grow-xs-1 {
     grid-row: span 1;
   }
-  .DGcol-xs-2 {
+  .gcol-xs-2 {
     grid-column: span 2;
   }
-  .DGrow-xs-2 {
+  .grow-xs-2 {
     grid-row: span 2;
   }
-  .DGcol-xs-3 {
+  .gcol-xs-3 {
     grid-column: span 3;
   }
-  .DGrow-xs-3 {
+  .grow-xs-3 {
     grid-row: span 3;
   }
-  .DGcol-xs-4 {
+  .gcol-xs-4 {
     grid-column: span 4;
   }
-  .DGrow-xs-4 {
+  .grow-xs-4 {
     grid-row: span 4;
   }
-  .DGcol-xs-5 {
+  .gcol-xs-5 {
     grid-column: span 5;
   }
-  .DGrow-xs-5 {
+  .grow-xs-5 {
     grid-row: span 5;
   }
-  .DGcol-xs-6 {
+  .gcol-xs-6 {
     grid-column: span 6;
   }
-  .DGrow-xs-6 {
+  .grow-xs-6 {
     grid-row: span 6;
   }
-  .DGcol-xs-7 {
+  .gcol-xs-7 {
     grid-column: span 7;
   }
-  .DGrow-xs-7 {
+  .grow-xs-7 {
     grid-row: span 7;
   }
-  .DGcol-xs-8 {
+  .gcol-xs-8 {
     grid-column: span 8;
   }
-  .DGrow-xs-8 {
+  .grow-xs-8 {
     grid-row: span 8;
   }
-  .DGcol-xs-9 {
+  .gcol-xs-9 {
     grid-column: span 9;
   }
-  .DGrow-xs-9 {
+  .grow-xs-9 {
     grid-row: span 9;
   }
-  .DGcol-xs-10 {
+  .gcol-xs-10 {
     grid-column: span 10;
   }
-  .DGrow-xs-10 {
+  .grow-xs-10 {
     grid-row: span 10;
   }
-  .DGcol-xs-11 {
+  .gcol-xs-11 {
     grid-column: span 11;
   }
-  .DGrow-xs-11 {
+  .grow-xs-11 {
     grid-row: span 11;
   }
-  .DGcol-xs-12 {
+  .gcol-xs-12 {
     grid-column: span 12;
   }
-  .DGrow-xs-12 {
+  .grow-xs-12 {
     grid-row: span 12;
   }
 }
@@ -375,76 +375,76 @@ p {
     max-width: 90%;
     margin: auto;
   }
-  .DGcol-sm-1 {
+  .gcol-sm-1 {
     grid-column: span 1;
   }
-  .DGrow-sm-1 {
+  .grow-sm-1 {
     grid-row: span 1;
   }
-  .DGcol-sm-2 {
+  .gcol-sm-2 {
     grid-column: span 2;
   }
-  .DGrow-sm-2 {
+  .grow-sm-2 {
     grid-row: span 2;
   }
-  .DGcol-sm-3 {
+  .gcol-sm-3 {
     grid-column: span 3;
   }
-  .DGrow-sm-3 {
+  .grow-sm-3 {
     grid-row: span 3;
   }
-  .DGcol-sm-4 {
+  .gcol-sm-4 {
     grid-column: span 4;
   }
-  .DGrow-sm-4 {
+  .grow-sm-4 {
     grid-row: span 4;
   }
-  .DGcol-sm-5 {
+  .gcol-sm-5 {
     grid-column: span 5;
   }
-  .DGrow-sm-5 {
+  .grow-sm-5 {
     grid-row: span 5;
   }
-  .DGcol-sm-6 {
+  .gcol-sm-6 {
     grid-column: span 6;
   }
-  .DGrow-sm-6 {
+  .grow-sm-6 {
     grid-row: span 6;
   }
-  .DGcol-sm-7 {
+  .gcol-sm-7 {
     grid-column: span 7;
   }
-  .DGrow-sm-7 {
+  .grow-sm-7 {
     grid-row: span 7;
   }
-  .DGcol-sm-8 {
+  .gcol-sm-8 {
     grid-column: span 8;
   }
-  .DGrow-sm-8 {
+  .grow-sm-8 {
     grid-row: span 8;
   }
-  .DGcol-sm-9 {
+  .gcol-sm-9 {
     grid-column: span 9;
   }
-  .DGrow-sm-9 {
+  .grow-sm-9 {
     grid-row: span 9;
   }
-  .DGcol-sm-10 {
+  .gcol-sm-10 {
     grid-column: span 10;
   }
-  .DGrow-sm-10 {
+  .grow-sm-10 {
     grid-row: span 10;
   }
-  .DGcol-sm-11 {
+  .gcol-sm-11 {
     grid-column: span 11;
   }
-  .DGrow-sm-11 {
+  .grow-sm-11 {
     grid-row: span 11;
   }
-  .DGcol-sm-12 {
+  .gcol-sm-12 {
     grid-column: span 12;
   }
-  .DGrow-sm-12 {
+  .grow-sm-12 {
     grid-row: span 12;
   }
 }
@@ -454,76 +454,76 @@ p {
     max-width: 90%;
     margin: auto;
   }
-  .DGcol-md-1 {
+  .gcol-md-1 {
     grid-column: span 1;
   }
-  .DGrow-md-1 {
+  .grow-md-1 {
     grid-row: span 1;
   }
-  .DGcol-md-2 {
+  .gcol-md-2 {
     grid-column: span 2;
   }
-  .DGrow-md-2 {
+  .grow-md-2 {
     grid-row: span 2;
   }
-  .DGcol-md-3 {
+  .gcol-md-3 {
     grid-column: span 3;
   }
-  .DGrow-md-3 {
+  .grow-md-3 {
     grid-row: span 3;
   }
-  .DGcol-md-4 {
+  .gcol-md-4 {
     grid-column: span 4;
   }
-  .DGrow-md-4 {
+  .grow-md-4 {
     grid-row: span 4;
   }
-  .DGcol-md-5 {
+  .gcol-md-5 {
     grid-column: span 5;
   }
-  .DGrow-md-5 {
+  .grow-md-5 {
     grid-row: span 5;
   }
-  .DGcol-md-6 {
+  .gcol-md-6 {
     grid-column: span 6;
   }
-  .DGrow-md-6 {
+  .grow-md-6 {
     grid-row: span 6;
   }
-  .DGcol-md-7 {
+  .gcol-md-7 {
     grid-column: span 7;
   }
-  .DGrow-md-7 {
+  .grow-md-7 {
     grid-row: span 7;
   }
-  .DGcol-md-8 {
+  .gcol-md-8 {
     grid-column: span 8;
   }
-  .DGrow-md-8 {
+  .grow-md-8 {
     grid-row: span 8;
   }
-  .DGcol-md-9 {
+  .gcol-md-9 {
     grid-column: span 9;
   }
-  .DGrow-md-9 {
+  .grow-md-9 {
     grid-row: span 9;
   }
-  .DGcol-md-10 {
+  .gcol-md-10 {
     grid-column: span 10;
   }
-  .DGrow-md-10 {
+  .grow-md-10 {
     grid-row: span 10;
   }
-  .DGcol-md-11 {
+  .gcol-md-11 {
     grid-column: span 11;
   }
-  .DGrow-md-11 {
+  .grow-md-11 {
     grid-row: span 11;
   }
-  .DGcol-md-12 {
+  .gcol-md-12 {
     grid-column: span 12;
   }
-  .DGrow-md-12 {
+  .grow-md-12 {
     grid-row: span 12;
   }
 }
@@ -533,76 +533,76 @@ p {
     max-width: 90%;
     margin: auto;
   }
-  .DGcol-lg-1 {
+  .gcol-lg-1 {
     grid-column: span 1;
   }
-  .DGrow-lg-1 {
+  .grow-lg-1 {
     grid-row: span 1;
   }
-  .DGcol-lg-2 {
+  .gcol-lg-2 {
     grid-column: span 2;
   }
-  .DGrow-lg-2 {
+  .grow-lg-2 {
     grid-row: span 2;
   }
-  .DGcol-lg-3 {
+  .gcol-lg-3 {
     grid-column: span 3;
   }
-  .DGrow-lg-3 {
+  .grow-lg-3 {
     grid-row: span 3;
   }
-  .DGcol-lg-4 {
+  .gcol-lg-4 {
     grid-column: span 4;
   }
-  .DGrow-lg-4 {
+  .grow-lg-4 {
     grid-row: span 4;
   }
-  .DGcol-lg-5 {
+  .gcol-lg-5 {
     grid-column: span 5;
   }
-  .DGrow-lg-5 {
+  .grow-lg-5 {
     grid-row: span 5;
   }
-  .DGcol-lg-6 {
+  .gcol-lg-6 {
     grid-column: span 6;
   }
-  .DGrow-lg-6 {
+  .grow-lg-6 {
     grid-row: span 6;
   }
-  .DGcol-lg-7 {
+  .gcol-lg-7 {
     grid-column: span 7;
   }
-  .DGrow-lg-7 {
+  .grow-lg-7 {
     grid-row: span 7;
   }
-  .DGcol-lg-8 {
+  .gcol-lg-8 {
     grid-column: span 8;
   }
-  .DGrow-lg-8 {
+  .grow-lg-8 {
     grid-row: span 8;
   }
-  .DGcol-lg-9 {
+  .gcol-lg-9 {
     grid-column: span 9;
   }
-  .DGrow-lg-9 {
+  .grow-lg-9 {
     grid-row: span 9;
   }
-  .DGcol-lg-10 {
+  .gcol-lg-10 {
     grid-column: span 10;
   }
-  .DGrow-lg-10 {
+  .grow-lg-10 {
     grid-row: span 10;
   }
-  .DGcol-lg-11 {
+  .gcol-lg-11 {
     grid-column: span 11;
   }
-  .DGrow-lg-11 {
+  .grow-lg-11 {
     grid-row: span 11;
   }
-  .DGcol-lg-12 {
+  .gcol-lg-12 {
     grid-column: span 12;
   }
-  .DGrow-lg-12 {
+  .grow-lg-12 {
     grid-row: span 12;
   }
 }
@@ -612,76 +612,76 @@ p {
     max-width: 80%;
     margin: auto;
   }
-  .DGcol-xl-1 {
+  .gcol-xl-1 {
     grid-column: span 1;
   }
-  .DGrow-xl-1 {
+  .grow-xl-1 {
     grid-row: span 1;
   }
-  .DGcol-xl-2 {
+  .gcol-xl-2 {
     grid-column: span 2;
   }
-  .DGrow-xl-2 {
+  .grow-xl-2 {
     grid-row: span 2;
   }
-  .DGcol-xl-3 {
+  .gcol-xl-3 {
     grid-column: span 3;
   }
-  .DGrow-xl-3 {
+  .grow-xl-3 {
     grid-row: span 3;
   }
-  .DGcol-xl-4 {
+  .gcol-xl-4 {
     grid-column: span 4;
   }
-  .DGrow-xl-4 {
+  .grow-xl-4 {
     grid-row: span 4;
   }
-  .DGcol-xl-5 {
+  .gcol-xl-5 {
     grid-column: span 5;
   }
-  .DGrow-xl-5 {
+  .grow-xl-5 {
     grid-row: span 5;
   }
-  .DGcol-xl-6 {
+  .gcol-xl-6 {
     grid-column: span 6;
   }
-  .DGrow-xl-6 {
+  .grow-xl-6 {
     grid-row: span 6;
   }
-  .DGcol-xl-7 {
+  .gcol-xl-7 {
     grid-column: span 7;
   }
-  .DGrow-xl-7 {
+  .grow-xl-7 {
     grid-row: span 7;
   }
-  .DGcol-xl-8 {
+  .gcol-xl-8 {
     grid-column: span 8;
   }
-  .DGrow-xl-8 {
+  .grow-xl-8 {
     grid-row: span 8;
   }
-  .DGcol-xl-9 {
+  .gcol-xl-9 {
     grid-column: span 9;
   }
-  .DGrow-xl-9 {
+  .grow-xl-9 {
     grid-row: span 9;
   }
-  .DGcol-xl-10 {
+  .gcol-xl-10 {
     grid-column: span 10;
   }
-  .DGrow-xl-10 {
+  .grow-xl-10 {
     grid-row: span 10;
   }
-  .DGcol-xl-11 {
+  .gcol-xl-11 {
     grid-column: span 11;
   }
-  .DGrow-xl-11 {
+  .grow-xl-11 {
     grid-row: span 11;
   }
-  .DGcol-xl-12 {
+  .gcol-xl-12 {
     grid-column: span 12;
   }
-  .DGrow-xl-12 {
+  .grow-xl-12 {
     grid-row: span 12;
   }
 }
@@ -691,76 +691,76 @@ p {
     max-width: 80%;
     margin: auto;
   }
-  .DGcol-xxl-1 {
+  .gcol-xxl-1 {
     grid-column: span 1;
   }
-  .DGrow-xxl-1 {
+  .grow-xxl-1 {
     grid-row: span 1;
   }
-  .DGcol-xxl-2 {
+  .gcol-xxl-2 {
     grid-column: span 2;
   }
-  .DGrow-xxl-2 {
+  .grow-xxl-2 {
     grid-row: span 2;
   }
-  .DGcol-xxl-3 {
+  .gcol-xxl-3 {
     grid-column: span 3;
   }
-  .DGrow-xxl-3 {
+  .grow-xxl-3 {
     grid-row: span 3;
   }
-  .DGcol-xxl-4 {
+  .gcol-xxl-4 {
     grid-column: span 4;
   }
-  .DGrow-xxl-4 {
+  .grow-xxl-4 {
     grid-row: span 4;
   }
-  .DGcol-xxl-5 {
+  .gcol-xxl-5 {
     grid-column: span 5;
   }
-  .DGrow-xxl-5 {
+  .grow-xxl-5 {
     grid-row: span 5;
   }
-  .DGcol-xxl-6 {
+  .gcol-xxl-6 {
     grid-column: span 6;
   }
-  .DGrow-xxl-6 {
+  .grow-xxl-6 {
     grid-row: span 6;
   }
-  .DGcol-xxl-7 {
+  .gcol-xxl-7 {
     grid-column: span 7;
   }
-  .DGrow-xxl-7 {
+  .grow-xxl-7 {
     grid-row: span 7;
   }
-  .DGcol-xxl-8 {
+  .gcol-xxl-8 {
     grid-column: span 8;
   }
-  .DGrow-xxl-8 {
+  .grow-xxl-8 {
     grid-row: span 8;
   }
-  .DGcol-xxl-9 {
+  .gcol-xxl-9 {
     grid-column: span 9;
   }
-  .DGrow-xxl-9 {
+  .grow-xxl-9 {
     grid-row: span 9;
   }
-  .DGcol-xxl-10 {
+  .gcol-xxl-10 {
     grid-column: span 10;
   }
-  .DGrow-xxl-10 {
+  .grow-xxl-10 {
     grid-row: span 10;
   }
-  .DGcol-xxl-11 {
+  .gcol-xxl-11 {
     grid-column: span 11;
   }
-  .DGrow-xxl-11 {
+  .grow-xxl-11 {
     grid-row: span 11;
   }
-  .DGcol-xxl-12 {
+  .gcol-xxl-12 {
     grid-column: span 12;
   }
-  .DGrow-xxl-12 {
+  .grow-xxl-12 {
     grid-row: span 12;
   }
 }
@@ -821,4 +821,57 @@ footer {
 }
 footer p {
   margin-bottom: 0;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 400px;
+}
+.carousel__slide {
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 3px #666;
+  width: 100%;
+  height: 100%;
+}
+.carousel__slide-hidden {
+  display: none;
+}
+.carousel__arrow {
+  position: absolute;
+  filter: drop-shadow(0px 0px 5px #555);
+  width: 2rem;
+  height: 2rem;
+  color: white;
+}
+.carousel__arrow:hover {
+  cursor: pointer;
+}
+.carousel__arrow-left {
+  left: 1rem;
+}
+.carousel__arrow-right {
+  right: 1rem;
+}
+.carousel__indicators {
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+}
+.carousel__indicator {
+  background-color: white;
+  height: 1em;
+  width: 1rem;
+  border-radius: 100%;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 5px #555;
+  margin: 0 0.2rem;
+  cursor: pointer;
+}
+.carousel__indicator-inactive {
+  background-color: grey;
 }/*# sourceMappingURL=style.css.map */
