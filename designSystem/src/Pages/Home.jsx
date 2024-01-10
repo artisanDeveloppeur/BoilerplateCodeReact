@@ -1,4 +1,5 @@
 import { Carousel } from "../Components/ContentDisplay/Carousel";
+import { Faq } from "../Components/ContentDisplay/Faq";
 import { Alert } from "../Components/Feedback/Alert";
 
 const slidesCarousel = [
@@ -33,6 +34,10 @@ export function Home() {
     <div className="gcol-xxl-12 gcol-xl-12 gcol-lg-12 gcol-md-12 gcol-sm-12 gcol-xs-12">
       <div className="subtitle">Carousel with indicators</div>
       <Carousel data={slidesCarousel} />
+    </div>
+    <div className="gcol-xxl-12 gcol-xl-12 gcol-lg-12 gcol-md-12 gcol-sm-12 gcol-xs-12">
+      <div className="subtitle">FAQ</div>
+      <Faq />
     </div>
     <div className="gcol-xxl-6 gcol-xl-6 gcol-lg-6 gcol-md-8 gcol-sm-12 gcol-xs-12">
       <div className="subtitle">Typographie custom</div>

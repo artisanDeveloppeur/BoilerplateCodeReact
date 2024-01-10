@@ -1,0 +1,26 @@
+.faq {
+  &__section {
+    width: 100%;
+    border-radius: 12px;
+    padding: 2em;
+    background-color: white;
+    box-shadow: 2px 2px 15px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  &__container {
+    display: grid;
+    gap: 1em;
+  }
+
+  &__header {
+    padding: 1.2em 1em;
+    font-weight: 600;
+    background-color: whitesmoke;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  &__content {
+    padding: 1em;
+  }
+}
