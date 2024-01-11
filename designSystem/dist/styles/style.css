@@ -910,7 +910,7 @@ footer p {
   }
 }
 
-section.card {
+.section__card {
   line-height: 1.3;
   display: grid;
   grid-template-rows: auto auto auto auto;
@@ -918,27 +918,26 @@ section.card {
   background-color: white;
   box-shadow: 0px 0px 55px 5px rgba(0, 0, 0, 0);
   padding: 1rem;
-  margin: 0.25rem 0 0 0;
   color: #333;
 }
 @media (min-width: 30rem) {
-  section.card {
+  .section__card {
     grid-template-columns: auto;
     background-color: white;
     box-shadow: 0px 0px 55px 5px rgba(0, 0, 0, 0);
   }
 }
-section.card picture {
+.section__card picture {
   grid-row: 1/-1;
   grid-column: 1/2;
   display: flex;
 }
 @media (min-width: 30rem) {
-  section.card picture {
+  .section__card picture {
     grid-column: 1/-1;
   }
 }
-section.card img {
+.section__card img {
   width: 100%;
   height: 250px;
   -o-object-fit: cover;
@@ -946,26 +945,26 @@ section.card img {
   -o-object-position: top center;
      object-position: top center;
 }
-section.card__title {
+.section__card__title {
   grid-column: 2/-1;
   margin: 1rem 0 0;
   font-weight: 400;
 }
 @media (min-width: 30rem) {
-  section.card__title {
+  .section__card__title {
     grid-column: 1/-1;
   }
 }
-section.card__description {
+.section__card__description {
   grid-column: 2/-1;
   margin-block: 1rem 1rem;
 }
 @media (min-width: 30rem) {
-  section.card__description {
+  .section__card__description {
     grid-column: 1/-1;
   }
 }
-section.card .read-more__link {
+.section__card .read-more__link {
   border: none;
   text-align: center;
   text-decoration: none;
@@ -977,10 +976,10 @@ section.card .read-more__link {
   color: grey;
   cursor: pointer;
 }
-section.card .read-more__link.rounded {
+.section__card .read-more__link.rounded {
   border-radius: 20px;
 }
-section.card .read-more__link:hover {
+.section__card .read-more__link:hover {
   text-decoration: none;
   border: 1px solid black;
 }/*# sourceMappingURL=style.css.map */
