@@ -78,6 +78,8 @@ export function Home() {
             image={c.image}
             title={c.title}
             description={c.description}
+            href={`#post:${c.id}`}
+            buttonLabel="+ Continuer à lire"
           />
 
         ))}
