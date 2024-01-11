@@ -2,6 +2,9 @@ import { DialogModal } from "../Feedback/DialogModal.jsx";
 import { ButtonComponent } from "../UI/ButtonComponent";
 import { useToggle } from "../../hooks/useToggle.js";
 
+import { formatDate } from "../../utils/classnames.js";
+import React, { useState, useEffect } from 'react';
+
 /**
  * @param {string} image
  * @param {string} title
@@ -13,6 +16,18 @@ import { useToggle } from "../../hooks/useToggle.js";
 export function Card({ image, title, description, href, buttonLabel }) {
   const showButton = !!(href && buttonLabel)
   const [isEditing, toggleEditing] = useToggle(false)
+
+  const [currentDate, setCurrentDate] = useState(new Date());
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentDate(new Date());
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
     <section className="section__card">
       <picture>
@@ -28,15 +43,12 @@ export function Card({ image, title, description, href, buttonLabel }) {
           {image && <img src={image} alt="" />}
         </picture>
         {title && <h2 className="section__card__title">{title}</h2>}
+        <p><span>{formatDate(currentDate)}</span></p>
         {description && <p className="section__card__description js-read-more is-expanded">{description}</p>}
       </DialogModal>}
 
       <span className="read-more__link-wrap">
-        <a id="read-more_0" className="read-more__link rounded" >
-          <span className="dashicons ">+ </span>
-          Continuer à lire
-        </a>
-        {showButton && <ButtonComponent variant="primary" onClick={toggleEditing}>{buttonLabel}</ButtonComponent>}
+        {showButton && <ButtonComponent variant="read-more__link rounded" onClick={toggleEditing}>{buttonLabel}</ButtonComponent>}
 
       </span>
     </section >

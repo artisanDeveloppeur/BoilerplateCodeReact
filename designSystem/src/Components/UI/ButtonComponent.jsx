@@ -2,10 +2,10 @@
  * @param {"primary" | "secondary" | "danger"} variant
  * @returns {JSX.Element}
  */
-export function ButtonComponent({ variant = 'primary', ...props }) {
+export function ButtonComponent({ variant, ...props }) {
   const newProps = {
     ...props,
-    className: `btn btn-${variant}`
+    className: `${variant}`
   }
   if (props.href) {
     return <a {...newProps} />

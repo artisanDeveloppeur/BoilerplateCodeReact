@@ -15,7 +15,6 @@ export function DialogModal({ children, onClose }) {
   }
 
   return createPortal(<dialog
-    style={{ width: 'calc(100vw - 3rem)', maxWidth: 600 }}
     ref={dialogRef}
     onCancel={handleClose}
     onClose={handleClose}>
