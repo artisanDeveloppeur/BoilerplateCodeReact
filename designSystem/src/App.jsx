@@ -11,6 +11,7 @@ import { Contact } from "./Pages/Contact";
 import "./../dist/styles/style.css"
 import { Header } from "./Layouts/Header.jsx";
 import { Footer } from "./Layouts/Footer.jsx";
+import { Weather } from "./Pages/Weather.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <Contact />,
+      },
+      {
+        path: "Weather",
+        element: <Weather />,
       },
 
     ],
