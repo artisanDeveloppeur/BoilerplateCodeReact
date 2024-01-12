@@ -38,13 +38,18 @@ export function Card({ image, title, description, href, buttonLabel }) {
       {isEditing && <DialogModal
         onClose={toggleEditing}
       >
+        <ButtonComponent type="button" aria-label="Close" variant="btn-close float-end" onClick={toggleEditing}></ButtonComponent>
 
         <picture>
           {image && <img src={image} alt="" />}
         </picture>
         {title && <h2 className="section__card__title">{title}</h2>}
         <p><span>{formatDate(currentDate)}</span></p>
-        {description && <p className="section__card__description js-read-more is-expanded">{description}</p>}
+        {description && <><p className="section__card__description js-read-more is-expanded">{description}{description}</p><p className="section__card__description js-read-more is-expanded">{description}{description}</p></>}
+        <div className="d-grid gap-2 col-6 mx-auto">
+          <ButtonComponent type="button" variant="btn btn-outline-secondary" onClick={toggleEditing}>Fermer la modale</ButtonComponent>
+
+        </div>
       </DialogModal>}
 
       <span className="read-more__link-wrap">
