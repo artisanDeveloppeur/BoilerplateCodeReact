@@ -8,17 +8,13 @@ export function WeatherApi() {
 
   const [cityName, setCityName] = useState("Liege");
   const [fetchErrorCity, setFetchErrorCity] = useState(false);
-  //const [loading, setLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const { loading, data, error } = useFetch(`https://api.weatherapi.com/v1/forecast.json?key=${VITE_WEATHERAPI_KEY}&q=${cityName}&days=5`)
-  console.log(data)
+  //const { loading, data, error } = useFetch(`https://api.weatherapi.com/v1/forecast.json?key=${VITE_WEATHERAPI_KEY}&q=${cityName}&days=5`)
+  //console.log(data)
 
-  const fetchData = (cityName) => {
 
-    /** */
 
-    /** */
-  }
 
   const [weather, setWeather] = useState({
     temperature: null,
@@ -45,11 +41,75 @@ export function WeatherApi() {
   const handleSearchClick = (cityName) => {
     fetchData(cityName);
   };
-  const handleCityChangeViaStorage = (cityName) => {
-    setCityName(cityName);
-    handleSearchClick(cityName)
-  }
 
+  const fetchData = async (cityName) => {
+    setIsLoading(true);
+    setFetchErrorCity(false)
+
+
+    try {
+      const response = await fetch(
+        `https://api.weatherapi.com/v1/forecast.json?key=${VITE_WEATHERAPI_KEY}&q=${cityName}&days=5`,
+      );
+      const data = await response.json();
+      const { current, location, forecast } = data;
+      console.log(current)
+      console.log(location)
+      console.log(forecast)
+
+      const { temp_c: tempC, feelslike_c: feelsLikeC, humidity, wind_kph } = current;
+      const { name, country, localtime: localtimeText } = location;
+      const date = new Date(localtimeText);
+      const formatDate = (dateString) => {
+        const date = new Date(dateString);
+        return date.toLocaleDateString('en-US', { day: 'numeric', month: 'short' });
+      };
+      const formatDayOfWeek = (dateString) => {
+        const date = new Date(dateString);
+        return date.toLocaleDateString('en-US', { weekday: 'long' });
+      };
+      const formatForecast = (forecast) => {
+        const forecastDays = forecast.forecastday;
+        return forecastDays.map((day) => {
+          const date = new Date(day.date);
+          const dayOfWeek = date.toLocaleDateString('en-US', { weekday: 'short' });
+          const maxTemp = day.day.maxtemp_c;
+          const minTemp = day.day.mintemp_c;
+          const icon = day.day.condition.icon;
+          return { dayOfWeek, icon, maxTemp: `${maxTemp}C`, minTemp: `${minTemp}C` };
+        });
+      };
+
+      const formattedDateTime = formatDate(date);
+      const dayOfWeek = formatDayOfWeek(date);
+      const conditionText = current.condition.text;
+      const icon = current.condition.icon;
+      const formattedForecast = formatForecast(forecast);
+      setWeather({
+        cityName,
+        temperature: `${tempC}`,
+        feelsLike: `${feelsLikeC}`,
+        humidity: `${humidity}`,
+        wind_kph: `${wind_kph}`,
+        conditionText,
+        icon,
+        name,
+        country,
+        locationText: formattedDateTime,
+        localtime: formattedDateTime,
+        dayOfWeek,
+        forecast: formattedForecast,
+      });
+
+
+    } catch (err) {
+      setFetchErrorCity(true)
+      console.error('City not found')
+    } finally {
+      setIsLoading(false);
+    }
+  };
+  /*
   if (loading) {
     return <Spinner />
   }
@@ -57,6 +117,7 @@ export function WeatherApi() {
   if (error) {
     return <Alert type="danger">{error.toString()}</Alert>
   }
+  */
   return (
     <>
       <div className="container_body">
