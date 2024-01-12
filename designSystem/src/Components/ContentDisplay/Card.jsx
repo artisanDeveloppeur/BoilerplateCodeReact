@@ -1,7 +1,7 @@
 import { DialogModal } from "../Feedback/DialogModal.jsx";
 import { ButtonComponent } from "../UI/ButtonComponent";
 import { useToggle } from "../../hooks/useToggle.js";
-
+import { useTruncateTxt } from "../../hooks/useTruncateTxt.js";
 import { formatDate } from "../../utils/classnames.js";
 import React, { useState, useEffect } from 'react';
 
@@ -28,6 +28,14 @@ export function Card({ image, title, description, href, buttonLabel }) {
     };
   }, []);
 
+  /*
+    const useTruncate = (input) => {
+      console.log(input.length)
+      return input?.length > 120 ? `${input.substring(0, 50)}...` : input;
+    }
+  */
+
+
   return (
     <section className="section__card">
       <picture>
@@ -35,6 +43,7 @@ export function Card({ image, title, description, href, buttonLabel }) {
       </picture>
       {title && <h2 className="section__card__title">{title}</h2>}
       {description && <p className="section__card__description js-read-more is-expanded">{description}</p>}
+      {useTruncateTxt(description)}
       {isEditing && <DialogModal
         onClose={toggleEditing}
       >
