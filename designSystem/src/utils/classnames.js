@@ -26,3 +26,8 @@ export function formatDate(date) {
 
   return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
 }
+
+
+export function truncateTxt(txt, txtLength, substringTx, separator) {
+  return txt?.length > txtLength ? `${txt.substring(0, substringTx)}${separator}` : txt;
+}

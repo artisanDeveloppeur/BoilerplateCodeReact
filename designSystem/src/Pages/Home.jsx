@@ -49,6 +49,7 @@ const cardsData = [
     "title": "Titre article 3 ",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
+  /*
   {
     "id": 4,
     "image": "https://picsum.photos/seed/img4/300/200",
@@ -67,11 +68,17 @@ const cardsData = [
     "title": "Titre article 6",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
+  */
 
 ]
 export function Home() {
   return <div className="grid">
+    <div className="gcol-xxl-12 gcol-xl-12 gcol-lg-12 gcol-md-12 gcol-sm-12 gcol-xs-12">
+      <div className="subtitle">Carousel with indicators</div>
+      <Carousel data={slidesCarousel} />
+    </div>
     <div>
+      <div className="subtitle">Blog with modal</div>
       <div className="wrapper__cards">
         {cardsData.map((c) => (
           <Card key={c.id}
@@ -84,10 +91,6 @@ export function Home() {
 
         ))}
       </div>
-    </div>
-    <div className="gcol-xxl-12 gcol-xl-12 gcol-lg-12 gcol-md-12 gcol-sm-12 gcol-xs-12">
-      <div className="subtitle">Carousel with indicators</div>
-      <Carousel data={slidesCarousel} />
     </div>
     <div className="gcol-xxl-12 gcol-xl-12 gcol-lg-12 gcol-md-12 gcol-sm-12 gcol-xs-12">
       <div className="subtitle">FAQ</div>

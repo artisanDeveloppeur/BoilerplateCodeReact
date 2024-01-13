@@ -1,8 +1,7 @@
 import { DialogModal } from "../Feedback/DialogModal.jsx";
 import { ButtonComponent } from "../UI/ButtonComponent";
 import { useToggle } from "../../hooks/useToggle.js";
-import { useTruncateTxt } from "../../hooks/useTruncateTxt.js";
-import { formatDate } from "../../utils/classnames.js";
+import { formatDate, truncateTxt } from "../../utils/classnames.js";
 import React, { useState, useEffect } from 'react';
 
 /**
@@ -42,8 +41,7 @@ export function Card({ image, title, description, href, buttonLabel }) {
         {image && <img src={image} alt="" />}
       </picture>
       {title && <h2 className="section__card__title">{title}</h2>}
-      {description && <p className="section__card__description js-read-more is-expanded">{description}</p>}
-      {useTruncateTxt(description)}
+      {description && <p className="section__card__description js-read-more is-expanded">{truncateTxt(description, 120, 100, ' [...]')}</p>}
       {isEditing && <DialogModal
         onClose={toggleEditing}
       >

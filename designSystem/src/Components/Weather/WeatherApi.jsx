@@ -10,11 +10,6 @@ export function WeatherApi() {
   const [fetchErrorCity, setFetchErrorCity] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  //const { loading, data, error } = useFetch(`https://api.weatherapi.com/v1/forecast.json?key=${VITE_WEATHERAPI_KEY}&q=${cityName}&days=5`)
-  //console.log(data)
-
-
-
 
   const [weather, setWeather] = useState({
     temperature: null,
