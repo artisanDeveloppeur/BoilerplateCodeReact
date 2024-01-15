@@ -830,6 +830,15 @@ footer p {
 .weather__container {
   background-color: #222831;
 }
+.weather .search__city {
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+.weather .search__submit {
+  outline: none;
+  border-radius: 25px;
+  padding: 10px;
+}
 
 .carousel {
   position: relative;
