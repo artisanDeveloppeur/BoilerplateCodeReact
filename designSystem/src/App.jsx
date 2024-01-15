@@ -1,4 +1,6 @@
 import {
+  NavLink,
+
   createBrowserRouter,
   Outlet,
   RouterProvider,
@@ -19,6 +21,22 @@ const router = createBrowserRouter([
     errorElement: <PageError />,
 
     children: [
+      {
+        path: '',
+        element: <div>
+          <h1>Liste des projets</h1>
+          <div>
+            <h2>Components</h2>
+            <NavLink to="/home">Home</NavLink>
+
+          </div>
+          <div>
+            <h2>API JSON</h2>
+            <NavLink to="/weather">Weather</NavLink>
+
+          </div>
+        </div>
+      },
       {
         path: "home",
         element: <Home />,
