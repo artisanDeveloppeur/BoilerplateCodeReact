@@ -13,7 +13,9 @@
 @import "./base/_grid.scss";
 @import "./base/_visibility.scss";
 
-@import "./layout/footer.scss";
+@import "./layout/_footer.scss";
+@import "./layout/_weather.scss";
+
 
 @import "./components/_carousel.scss";
 @import "./components/_faq.scss";

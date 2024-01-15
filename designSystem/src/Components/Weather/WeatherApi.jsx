@@ -115,76 +115,87 @@ export function WeatherApi() {
   */
   return (
     <>
-      <div className="container_body">
-        <div className="container_meteo">
-          <div className="weather-side">
-            <div className="weather-gradient"><img src={weather.icon} alt="" /></div>
-            <div className="date-container">
-              <p className="location">{weather.name} - {weather.country}</p>
-
-              <h2 className="date-dayname">{weather.dayOfWeek}</h2>
-              <i className="location-icon" data-feather="map-pin"></i>
-              <span className="location">{weather.locationText}</span>
-            </div>
-            <div className="weather-container"><i className="weather-icon" data-feather="sun"></i>
-              <h1 className="weather-temp">{weather.temperature}°C</h1>
-              <h3 className="weather-desc">{weather.conditionText}</h3>
-            </div>
+      <div className="grid">
+        <div className="gcol-xl-6">
+          <div className="weather weather__container">
+            <h2>App weather</h2>
           </div>
-          <div className="info-side">
-            <div className="today-info-container">
-              <div className="today-info">
-                <div className="precipitation"><span className="title">WIND</span><span
-                  className="value">{weather.wind_kph} km/h</span>
-                  <div className="clear"></div>
+
+        </div>
+        <div className="gcol-xl-6">
+          <div className="container_body">
+            <div className="container_meteo">
+              <div className="weather-side">
+                <div className="weather-gradient"><img src={weather.icon} alt="" /></div>
+                <div className="date-container">
+                  <p className="location">{weather.name} - {weather.country}</p>
+
+                  <h2 className="date-dayname">{weather.dayOfWeek}</h2>
+                  <i className="location-icon" data-feather="map-pin"></i>
+                  <span className="location">{weather.locationText}</span>
                 </div>
-                <div className="humidity"><span className="title">HUMIDITY</span><span
-                  className="value">{weather.humidity}%</span>
-                  <div className="clear"></div>
-                </div>
-                <div className="wind"><span className="title">FELLING LIKE</span><span
-                  className="value">{weather.feelsLike}°C</span>
-                  <div className="clear"></div>
+                <div className="weather-container"><i className="weather-icon" data-feather="sun"></i>
+                  <h1 className="weather-temp">{weather.temperature}°C</h1>
+                  <h3 className="weather-desc">{weather.conditionText}</h3>
                 </div>
               </div>
-            </div>
-            <div className="week-container today-info">
-              <span className="title">NEXT THREE DAYS</span>
-              <ul className="week-list">
-                {weather.forecast && weather.forecast.map((day) => (
-                  <li key={day.dayOfWeek}>
-                    <i className="day-icon" data-feather="cloud"><img src={day.icon}
-                      alt="" /></i>
-                    <span className="day-name">{day.dayOfWeek}</span>
-                    <span className="day-temp">{day.maxTemp}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="location-container">
+              <div className="info-side">
+                <div className="today-info-container">
+                  <div className="today-info">
+                    <div className="precipitation"><span className="title">WIND</span><span
+                      className="value">{weather.wind_kph} km/h</span>
+                      <div className="clear"></div>
+                    </div>
+                    <div className="humidity"><span className="title">HUMIDITY</span><span
+                      className="value">{weather.humidity}%</span>
+                      <div className="clear"></div>
+                    </div>
+                    <div className="wind"><span className="title">FELLING LIKE</span><span
+                      className="value">{weather.feelsLike}°C</span>
+                      <div className="clear"></div>
+                    </div>
+                  </div>
+                </div>
+                <div className="week-container today-info">
+                  <span className="title">NEXT THREE DAYS</span>
+                  <ul className="week-list">
+                    {weather.forecast && weather.forecast.map((day) => (
+                      <li key={day.dayOfWeek}>
+                        <i className="day-icon" data-feather="cloud"><img src={day.icon}
+                          alt="" /></i>
+                        <span className="day-name">{day.dayOfWeek}</span>
+                        <span className="day-temp">{day.maxTemp}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="location-container">
 
-              <input
-                type="text"
-                placeholder="Enter a city name"
-                id="search-btn"
-                className={`searchTerm${fetchErrorCity ? ' errorCity' : ''}`}
-                value={cityName}
-                onChange={handleCityChange}
-              />
-              <button className="location-button" onClick={() => handleSearchClick(cityName)}>
-                <span>Change location</span>
-              </button>
-              {
-                fetchErrorCity && (
-                  <p className="text-error-city">
-                    Wrong city
-                  </p>
-                )
-              }
+                  <input
+                    type="text"
+                    placeholder="Enter a city name"
+                    id="search-btn"
+                    className={`searchTerm${fetchErrorCity ? ' errorCity' : ''}`}
+                    value={cityName}
+                    onChange={handleCityChange}
+                  />
+                  <button className="location-button" onClick={() => handleSearchClick(cityName)}>
+                    <span>Change location</span>
+                  </button>
+                  {
+                    fetchErrorCity && (
+                      <p className="text-error-city">
+                        Wrong city
+                      </p>
+                    )
+                  }
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
     </>
   );
 };

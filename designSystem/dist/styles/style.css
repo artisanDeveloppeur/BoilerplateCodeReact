@@ -824,6 +824,13 @@ footer p {
   margin-bottom: 0;
 }
 
+.weather {
+  color: #ffffff;
+}
+.weather__container {
+  background-color: #222831;
+}
+
 .carousel {
   position: relative;
   display: flex;
