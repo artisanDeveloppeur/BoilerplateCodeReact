@@ -47,10 +47,11 @@ export function WeatherApi() {
         `https://api.weatherapi.com/v1/forecast.json?key=${VITE_WEATHERAPI_KEY}&q=${cityName}&days=5`,
       );
       const data = await response.json();
+      console.log(data)
       const { current, location, forecast } = data;
-      console.log(current)
-      console.log(location)
-      console.log(forecast)
+      console.table(current)
+      console.table(location)
+      console.log(forecast.forecastday[0])
 
       const { temp_c: tempC, feelslike_c: feelsLikeC, humidity, wind_kph } = current;
       const { name, country, localtime: localtimeText } = location;
@@ -65,6 +66,8 @@ export function WeatherApi() {
       };
       const formatForecast = (forecast) => {
         const forecastDays = forecast.forecastday;
+        //console.log(forecastDays)
+
         return forecastDays.map((day) => {
           const date = new Date(day.date);
           const dayOfWeek = date.toLocaleDateString('en-US', { weekday: 'short' });
@@ -115,11 +118,54 @@ export function WeatherApi() {
   */
   return (
     <>
+
       <div className="grid">
         <div className="gcol-xl-6">
-          <div className="weather weather__container">
+          <section className="weather weather__container">
             <h2>App weather</h2>
-          </div>
+            <div className="side__container">
+              <p className="weather__side">
+                <span className="weather__img"><img src={weather.icon} alt="" /></span>
+                <span className="weather__location">{weather.name} - {weather.country}</span>
+              </p>
+              <p className="weather__side">
+                <span className="weather__day">{weather.dayOfWeek}</span>
+                <span className="weather__locationDay">{weather.locationText}</span>
+              </p>
+              <p className="weather__side">
+                <span className="weather__temperature">{weather.temperature}°C</span>
+                <span className="weather__condition">{weather.conditionText}</span>
+              </p>
+            </div>
+            <hr />
+            <div className="today-info__container">
+              <p className="today-info__precipitation">
+                <span className="today-info__title">wind</span>
+                <span className="today-info__value">{weather.wind_kph} km/h</span>
+              </p>
+              <p className="today-info__humidity">
+                <span className="today-info__title">humidity</span>
+                <span className="today-info__value">{weather.humidity}%</span>
+              </p>
+              <p className="today-info__wind">
+                <span className="today-info__title">felling like</span>
+                <span className="today-info__value">{weather.feelsLike}°C</span>
+              </p>
+            </div>
+            <hr />
+            <div className="week__container ">
+              <span className="week__title">next three days</span>
+              <ul className="week__list">
+                {weather.forecast && weather.forecast.map((day) => (
+                  <li key={day.dayOfWeek}>
+                    <img src={day.icon} alt="" />
+                    <span className="week__day-name">{day.dayOfWeek}</span>
+                    <span className="Week__day-temp">{day.maxTemp}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
 
         </div>
         <div className="gcol-xl-6">
