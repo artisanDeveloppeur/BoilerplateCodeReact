@@ -15,7 +15,6 @@ import { Header } from "./Layouts/Header.jsx";
 import { Footer } from "./Layouts/Footer.jsx";
 import { Weather } from "./Pages/Weather.jsx";
 import { ScrollTop } from "./Components/Navigation/ScrollTop.jsx";
-//import Typewriter from "./hooks/useTypewriter.js";
 import { Typewriter } from "./Components/Animation/Typewriter.jsx";
 
 const router = createBrowserRouter([
@@ -29,6 +28,7 @@ const router = createBrowserRouter([
         path: '',
         element: <div>
           <h1>Projet en <Typewriter text="React" delay={750} infinite /></h1>
+
           <div>
             <h2>Components</h2>
             <NavLink to="/home">Home</NavLink>

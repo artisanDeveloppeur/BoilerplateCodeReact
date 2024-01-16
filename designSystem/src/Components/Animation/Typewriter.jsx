@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+
 export function Typewriter({ text, delay, infinite }) {
   const [currentText, setCurrentText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -37,3 +38,5 @@ export function Typewriter({ text, delay, infinite }) {
 
   return <strong>{currentText}</strong>;
 }
+
+
