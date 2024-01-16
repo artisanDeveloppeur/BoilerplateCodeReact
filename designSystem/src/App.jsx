@@ -14,6 +14,7 @@ import "./../dist/styles/style.css"
 import { Header } from "./Layouts/Header.jsx";
 import { Footer } from "./Layouts/Footer.jsx";
 import { Weather } from "./Pages/Weather.jsx";
+import { ScrollTop } from "./Components/Navigation/ScrollTop.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -74,6 +75,7 @@ function Root() {
         <Outlet />
       </main>
       <Footer />
+      <ScrollTop />
     </>
   );
 }
