@@ -1056,4 +1056,34 @@ dialog img {
   stroke-linejoin: round;
   stroke-miterlimit: 1.5;
   fill: none;
+}
+
+.scrollspy {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  display: flex;
+  background-color: #e2e8f0;
+  z-index: 100;
+  flex-direction: column;
+}
+
+.hero {
+  height: 600px;
+  background-color: #caf0f8;
+}
+
+.services {
+  height: 600px;
+  background-color: #f5cac3;
+}
+
+.blog {
+  height: 600px;
+  background-color: #d8f3dc;
+}
+
+.contact {
+  height: 600px;
+  background-color: #ffc6ff;
 }/*# sourceMappingURL=style.css.map */

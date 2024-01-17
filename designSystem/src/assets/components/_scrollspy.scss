@@ -1,0 +1,9 @@
+.scrollspy {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  display: flex;
+  background-color: #e2e8f0;
+  z-index: 100;
+  flex-direction: column;
+}
