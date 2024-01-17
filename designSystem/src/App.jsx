@@ -16,6 +16,7 @@ import { Footer } from "./Layouts/Footer.jsx";
 import { Weather } from "./Pages/Weather.jsx";
 import { ScrollTop } from "./Components/Navigation/ScrollTop.jsx";
 import { Typewriter } from "./Components/Animation/Typewriter.jsx";
+import A4Animation from "./Components/Animation/A4Layout.jsx";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,9 @@ const router = createBrowserRouter([
       {
         path: '',
         element: <div>
-          <h1>Projet en <Typewriter text="React" delay={750} infinite /></h1>
+          <h1>Projet  <Typewriter text="Design System" delay={750} infinite /></h1>
+          <p>est réalisé avec avec les technologies suivantes : <strong><A4Animation /></strong></p>
+
 
           <div>
             <h2>Components</h2>
