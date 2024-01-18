@@ -834,7 +834,7 @@ footer p {
   color: #ffffff;
 }
 .weather__container {
-  background-color: #222831;
+  background-color: #343d4b;
 }
 .weatherside__container {
   display: flex;
@@ -843,7 +843,7 @@ footer p {
   padding-inline: 1rem;
   align-items: center;
   justify-content: center;
-  background-color: #343d4b;
+  background-color: #222831;
 }
 .weather__side {
   position: relative;
@@ -897,16 +897,16 @@ footer p {
 
 .today-info__container {
   display: flex;
+  flex-direction: row;
   gap: 1rem;
   padding-block: 1rem;
   padding-inline: 1rem;
   align-items: center;
   justify-content: center;
-  background-color: #343d4b;
+  background-color: #222831;
 }
 .today-info__precipitation, .today-info__humidity, .today-info__wind {
   position: relative;
-  height: 100%;
   border-radius: 25px;
   box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -920,9 +920,12 @@ footer p {
 }
 .today-info__value {
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
+.week__container {
+  margin-block: 2rem;
+}
 .week__title {
   text-transform: capitalize;
 }
@@ -933,9 +936,41 @@ footer p {
   padding-inline: 1rem;
   align-items: center;
   justify-content: space-around;
+}
+.week__list li {
+  display: flex;
   flex-direction: row;
+  align-items: center;
+}
+.week__list li div {
+  display: flex;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+}
+.week__day-name {
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+.week__day-temp {
+  font-size: 3em;
+  font-style: normal;
+  letter-spacing: 4px;
+  line-height: 5rem;
+  margin-block: 0.5rem;
+  font-weight: 700;
 }
 
+@media screen and (max-width: 576px) {
+  .weatherside__container,
+  .today-info__container,
+  .week__list {
+    flex-direction: column;
+  }
+  .today-info__precipitation, .today-info__humidity, .today-info__wind {
+    align-items: center;
+  }
+}
 .carousel {
   position: relative;
   display: flex;

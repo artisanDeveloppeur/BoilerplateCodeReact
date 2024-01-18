@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import './../../../dist/styles/meteo.css'
 import { FaSearchLocation } from "react-icons/fa";
 import { ButtonComponent } from "../UI/ButtonComponent";
 
@@ -123,8 +122,8 @@ export function WeatherApi() {
     <>
 
       <div className="grid">
-        <div className="gcol-xl-6">
-          <section className="weather weather__container">
+        <div className="gcol-xl-12">
+          <section className="grid grid-noGap weather weather__container">
             <h2 className="txt-center">App weather</h2>
             <div className="search__container">
 
@@ -137,7 +136,7 @@ export function WeatherApi() {
               />
               <ButtonComponent variant="search__submit" onClick={() => handleSearchClick(cityName)}><FaSearchLocation />Search</ButtonComponent>
             </div>
-            <div className="weatherside__container">
+            <div className="weatherside__container gcol-xl-6">
               <div className="weather__icon">
                 <span className="weather__img"><img src={weather.icon} alt="" /></span>
               </div>
@@ -152,8 +151,7 @@ export function WeatherApi() {
                 <span className="weather__condition">{weather.conditionText}</span>
               </div>
             </div>
-            <hr />
-            <div className="today-info__container">
+            <div className="today-info__container gcol-xl-6">
               <p className="today-info__precipitation">
                 <span className="today-info__title">wind</span>
                 <span className="today-info__value">{weather.wind_kph} km/h</span>
@@ -167,15 +165,19 @@ export function WeatherApi() {
                 <span className="today-info__value">{weather.feelsLike}°C</span>
               </p>
             </div>
-            <hr />
             <div className="week__container ">
-              <h3 className="week__title txt-center">next three days</h3>
+              <h2 className="week__title txt-center">next three days</h2>
               <ul className="week__list">
                 {weather.forecast && weather.forecast.map((day) => (
                   <li key={day.dayOfWeek}>
                     <img src={day.icon} alt="" />
-                    <span className="week__day-name">{day.dayOfWeek}</span>
-                    <span className="Week__day-temp">{day.maxTemp}</span>
+
+                    <div className="">
+                      <span className="week__day-name">{day.dayOfWeek}</span>
+                      <span className="week__day-temp">{day.maxTemp}</span>
+
+                    </div>
+
                   </li>
                 ))}
               </ul>
@@ -183,72 +185,11 @@ export function WeatherApi() {
           </section>
 
         </div>
+        {/*
         <div className="gcol-xl-6">
-          <div className="container_body">
-            <div className="container_meteo">
-              <div className="weather-side">
-                <div className="weather-gradient"><img src={weather.icon} alt="" /></div>
-                <div className="date-container">
-                  <p className="location">{weather.name} - {weather.country}</p>
 
-                  <h2 className="date-dayname">{weather.dayOfWeek}</h2>
-                  <i className="location-icon" data-feather="map-pin"></i>
-                  <span className="location">{weather.locationText}</span>
-                </div>
-                <div className="weather-container"><i className="weather-icon" data-feather="sun"></i>
-                  <h1 className="weather-temp">{weather.temperature}°C</h1>
-                  <h3 className="weather-desc">{weather.conditionText}</h3>
-                </div>
-              </div>
-              <div className="info-side">
-                <div className="today-info-container">
-                  <div className="today-info">
-                    <div className="precipitation"><span className="title">WIND</span><span
-                      className="value">{weather.wind_kph} km/h</span>
-                      <div className="clear"></div>
-                    </div>
-                    <div className="humidity"><span className="title">HUMIDITY</span><span
-                      className="value">{weather.humidity}%</span>
-                      <div className="clear"></div>
-                    </div>
-                    <div className="wind"><span className="title">FELLING LIKE</span><span
-                      className="value">{weather.feelsLike}°C</span>
-                      <div className="clear"></div>
-                    </div>
-                  </div>
-                </div>
-                <div className="week-container today-info">
-                  <span className="title">NEXT THREE DAYS</span>
-                  <ul className="week-list">
-                    {weather.forecast && weather.forecast.map((day) => (
-                      <li key={day.dayOfWeek}>
-                        <i className="day-icon" data-feather="cloud"><img src={day.icon}
-                          alt="" /></i>
-                        <span className="day-name">{day.dayOfWeek}</span>
-                        <span className="day-temp">{day.maxTemp}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="location-container">
-
-                  <input
-                    type="text"
-                    placeholder="Enter a city name"
-                    id="search-btn"
-                    className={`searchTerm`}
-                    value={cityName}
-                    onChange={handleCityChange}
-                  />
-                  <button className="location-button" onClick={() => handleSearchClick(cityName)}>
-                    <span>Change location</span>
-                  </button>
-
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
+        */}
       </div>
 
     </>
