@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import './../../../dist/styles/meteo.css'
-import { useFetch } from "../../hooks/useFetch";
-import { Spinner } from "../Feedback/Spinner";
-import { Alert } from "../Feedback/Alert";
+import { FaSearchLocation } from "react-icons/fa";
+import { ButtonComponent } from "../UI/ButtonComponent";
+
 export function WeatherApi() {
   const VITE_WEATHERAPI_KEY = import.meta.env.VITE_WEATHERAPI_KEY
 
   const [cityName, setCityName] = useState("Liege");
-  const [fetchErrorCity, setFetchErrorCity] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
 
@@ -39,7 +38,6 @@ export function WeatherApi() {
 
   const fetchData = async (cityName) => {
     setIsLoading(true);
-    setFetchErrorCity(false)
 
 
     try {
@@ -106,7 +104,7 @@ export function WeatherApi() {
 
 
     } catch (err) {
-      setFetchErrorCity(true)
+
       console.error('City not found')
     } finally {
       setIsLoading(false);
@@ -127,40 +125,32 @@ export function WeatherApi() {
       <div className="grid">
         <div className="gcol-xl-6">
           <section className="weather weather__container">
-            <h2>App weather</h2>
+            <h2 className="txt-center">App weather</h2>
             <div className="search__container">
 
               <input
                 type="text"
                 placeholder="Enter a city name"
-                className={`search__city${fetchErrorCity ? ' errorCity' : ''}`}
+                className={`search__city`}
                 value={cityName}
                 onChange={handleCityChange}
               />
-              <button className="search__submit" onClick={() => handleSearchClick(cityName)}>
-                <span>Change location</span>
-              </button>
-              {
-                fetchErrorCity && (
-                  <p className="text-error-city">
-                    Wrong city
-                  </p>
-                )
-              }
+              <ButtonComponent variant="search__submit" onClick={() => handleSearchClick(cityName)}><FaSearchLocation />Search</ButtonComponent>
             </div>
-            <div className="side__container">
-              <p className="weather__side">
+            <div className="weatherside__container">
+              <div className="weather__icon">
                 <span className="weather__img"><img src={weather.icon} alt="" /></span>
+              </div>
+
+              <div className="weather__side">
                 <span className="weather__location">{weather.name} - {weather.country}</span>
-              </p>
-              <p className="weather__side">
                 <span className="weather__day">{weather.dayOfWeek}</span>
                 <span className="weather__locationDay">{weather.locationText}</span>
-              </p>
-              <p className="weather__side">
+              </div>
+              <div className="weather__side">
                 <span className="weather__temperature">{weather.temperature}°C</span>
                 <span className="weather__condition">{weather.conditionText}</span>
-              </p>
+              </div>
             </div>
             <hr />
             <div className="today-info__container">
@@ -179,7 +169,7 @@ export function WeatherApi() {
             </div>
             <hr />
             <div className="week__container ">
-              <span className="week__title">next three days</span>
+              <h3 className="week__title txt-center">next three days</h3>
               <ul className="week__list">
                 {weather.forecast && weather.forecast.map((day) => (
                   <li key={day.dayOfWeek}>
@@ -246,20 +236,14 @@ export function WeatherApi() {
                     type="text"
                     placeholder="Enter a city name"
                     id="search-btn"
-                    className={`searchTerm${fetchErrorCity ? ' errorCity' : ''}`}
+                    className={`searchTerm`}
                     value={cityName}
                     onChange={handleCityChange}
                   />
                   <button className="location-button" onClick={() => handleSearchClick(cityName)}>
                     <span>Change location</span>
                   </button>
-                  {
-                    fetchErrorCity && (
-                      <p className="text-error-city">
-                        Wrong city
-                      </p>
-                    )
-                  }
+
                 </div>
               </div>
             </div>

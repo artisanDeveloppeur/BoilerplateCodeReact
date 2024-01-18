@@ -4,20 +4,135 @@
   &__container {
     background-color: #222831;
 
+
   }
 
-  &__side {}
+  &side__container {
+    display: flex;
+    gap: 1rem;
+    padding-block: 1rem;
+    padding-inline: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #343d4b;
+  }
+
+  &__side {
+    position: relative;
+    height: 100%;
+    border-radius: 25px;
+    -webkit-box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-block: 1rem;
+    padding-inline: 1rem;
+
+    span {}
+  }
+
+  &__temperature {
+    font-size: 4em;
+    font-style: normal;
+    letter-spacing: 4px;
+    line-height: 5rem;
+    margin-block: 0.5rem;
+    font-weight: 700;
+  }
+
+  &__day {
+    font-size: 2.25rem;
+    font-style: normal;
+    letter-spacing: 2px;
+    line-height: 54px;
+    font-weight: 500;
+  }
+
+  &__condition {
+    font-size: 1.75rem;
+    font-weight: 500;
+
+  }
+
+  .search {
+    &__container {
+      display: flex;
+      gap: 1rem;
+      padding-block: 1rem;
+      padding-inline: 1rem;
+      justify-content: center;
+    }
+  }
 
   .search__city {
     border-radius: 20px;
-    padding: 10px 20px;
+    padding: 0.5rem 1.5rem
   }
 
   .search__submit {
     outline: none;
     border-radius: 25px;
-    padding: 10px;
+    padding: 0.5rem 0.75rem;
+
+    svg {
+      font-size: 1.5rem;
+    }
   }
 
 
+}
+
+.today-info {
+  &__container {
+    display: flex;
+    gap: 1rem;
+    padding-block: 1rem;
+    padding-inline: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #343d4b;
+  }
+
+  &__precipitation,
+  &__humidity,
+  &__wind {
+    position: relative;
+    height: 100%;
+    border-radius: 25px;
+    -webkit-box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-block: 1rem;
+    padding-inline: 1rem;
+  }
+
+  &__title {
+    text-transform: capitalize;
+  }
+
+  &__value {
+    font-weight: 700;
+    font-size: 2rem;
+  }
+}
+
+.week {
+  &__container {}
+
+  &__title {
+    text-transform: capitalize;
+  }
+
+  &__list {
+    display: flex;
+    gap: 1rem;
+    padding-block: 1rem;
+    padding-inline: 1rem;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+  }
 }
