@@ -21,3 +21,5 @@ export function DialogModal({ children, onClose }) {
     {children}
   </dialog>, document.body)
 }
+
+// https://blog.logrocket.com/creating-reusable-pop-up-modal-react/

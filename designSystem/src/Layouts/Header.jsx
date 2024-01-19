@@ -35,18 +35,21 @@ export function Header({ page }) {
               <li className="nav-item">
                 <NavLink className={activeClassIf(page === 'home', 'nav-link')} aria-current="page" to="/home">Home</NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink className={activeClassIf(page === 'weather', 'nav-link')} to="/weather">Weather</NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className={activeClassIf(page === 'contact', 'nav-link')} to="/contact">Contact</NavLink>
-              </li>
-
               {/* for large screens */}
               <Navbar />
 
               {/* for small screens */}
               <MobileNav />
+              <li className="nav-item">
+                <NavLink className={activeClassIf(page === 'weather', 'nav-link')} to="/weather">Weather</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className={activeClassIf(page === 'scroll', 'nav-link')} to="/scroll">Scroll</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className={activeClassIf(page === 'contact', 'nav-link')} to="/contact">Contact</NavLink>
+              </li>
+
             </ul>
             {/*
             <div className="nav-area">
@@ -54,7 +57,7 @@ export function Header({ page }) {
             react-multilevel-dropdown-menu
 
             https://blog.logrocket.com/how-create-multilevel-dropdown-menu-react/
-            
+
             </div>
             */}
           </div>

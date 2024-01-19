@@ -8,14 +8,15 @@ import {
 } from "react-router-dom";
 import { Home } from "./Pages/Home";
 import { Contact } from "./Pages/Contact";
-
+import { Weather } from "./Pages/Weather.jsx";
+import { Scroll } from "./Pages/Scroll.jsx";
 
 import "./../dist/styles/style.css"
 import { Header } from "./Layouts/Header.jsx";
 import { Footer } from "./Layouts/Footer.jsx";
-import { Weather } from "./Pages/Weather.jsx";
+
+
 import { ScrollTop } from "./Components/Navigation/ScrollTop.jsx";
-import { Typewriter } from "./Components/Animation/Typewriter.jsx";
 import A4Animation from "./Components/Animation/A4Layout.jsx";
 
 const router = createBrowserRouter([
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
       {
         path: '',
         element: <div>
-          <h1>Projet  <Typewriter text="Design System" delay={750} infinite /></h1>
+          <h1>Projet  </h1>
           <p>est réalisé avec avec les technologies suivantes : <strong><A4Animation /></strong></p>
 
 
@@ -74,6 +75,10 @@ const router = createBrowserRouter([
             ],
           },
         ],
+      },
+      {
+        path: "scroll",
+        element: <Scroll />
       },
       {
         path: "contact",

@@ -9,7 +9,6 @@ export function ScrollSpy() {
 
   const scrollToSection = (elementRef) => {
 
-    console.log(elementRef)
     window.scrollTo({
       top: elementRef.current.offsetTop,
       behavior: "smooth",
@@ -33,7 +32,7 @@ export function ScrollSpy() {
       </nav>
       <div>
         <section ref={networking} className="scrollspy " id="networking">
-          <h3>Service réseau</h3>
+          <h3>Réseau</h3>
           <hr className="separator-start separator-start__cloud" />
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida elit sit amet ante bibendum luctus. Phasellus pellentesque eros vitae ipsum interdum gravida.</p>
           <div className="nav-pills-div nav-pills-div__cloud grid">
@@ -60,7 +59,7 @@ export function ScrollSpy() {
           </div>
         </section>
         <section ref={developpement} className="scrollspy " id="developpement">
-          <h3>Service dévelopement web</h3>
+          <h3>Dévelopement web</h3>
           <hr className="separator-start separator-start__cloud" />
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida elit sit amet ante bibendum luctus. Phasellus pellentesque eros vitae ipsum interdum gravida.</p>
           <div className="nav-pills-div nav-pills-div__cloud grid">
@@ -87,7 +86,7 @@ export function ScrollSpy() {
           </div>
         </section>
         <section ref={design} className="scrollspy " id="design">
-          <h3>Service Design</h3>
+          <h3>Design</h3>
           <hr className="separator-start separator-start__cloud" />
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida elit sit amet ante bibendum luctus. Phasellus pellentesque eros vitae ipsum interdum gravida.</p>
           <div className="nav-pills-div nav-pills-div__cloud grid">
