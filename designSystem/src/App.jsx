@@ -49,6 +49,33 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
+        path: "/services/",
+        children: [
+          {
+            path: "web-design",
+          },
+          {
+            path: "web-dev",
+            children: [
+              {
+                path: "frontend",
+              },
+              {
+                path: "Backend",
+                children: [
+                  {
+                    path: "node",
+                  },
+                  {
+                    path: "php",
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
         path: "contact",
         element: <Contact />,
       },
@@ -56,6 +83,7 @@ const router = createBrowserRouter([
         path: "Weather",
         element: <Weather />,
       },
+
 
     ],
   },

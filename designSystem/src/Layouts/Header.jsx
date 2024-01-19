@@ -4,6 +4,10 @@ import {
 } from "react-router-dom";
 import { useToggle } from "../hooks/useToggle.js"
 import { activeClassIf } from "../utils/classnames.js"
+import Navbar from "../Components/Navigation/Navbar.jsx";
+import MobileNav from "../Components/Navigation/MobileNav.jsx";
+
+import "../../dist/styles/menu.css"
 
 export function Header({ page }) {
   //const { state } = useNavigation();
@@ -37,10 +41,27 @@ export function Header({ page }) {
               <li className="nav-item">
                 <NavLink className={activeClassIf(page === 'contact', 'nav-link')} to="/contact">Contact</NavLink>
               </li>
+
+              {/* for large screens */}
+              <Navbar />
+
+              {/* for small screens */}
+              <MobileNav />
             </ul>
+            {/*
+            <div className="nav-area">
+
+            react-multilevel-dropdown-menu
+
+            https://blog.logrocket.com/how-create-multilevel-dropdown-menu-react/
+            
+            </div>
+            */}
           </div>
+
         </div>
       </nav>
+
     </header>
   </>
 }
