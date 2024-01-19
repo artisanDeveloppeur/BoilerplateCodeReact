@@ -1,3 +1,4 @@
+import { Accordion } from "../Components/ContentDisplay/Accordion";
 import { Card } from "../Components/ContentDisplay/Card";
 import { Carousel } from "../Components/ContentDisplay/Carousel";
 import { Faq } from "../Components/ContentDisplay/Faq";
@@ -93,17 +94,16 @@ export function Home() {
       </div>
     </div>
     <div className="gcol-xxl-12 gcol-xl-12 gcol-lg-12 gcol-md-12 gcol-sm-12 gcol-xs-12">
-      <div className="subtitle">FAQ</div>
+      <div className="subtitle">Tabs</div>
+
+    </div>
+    <div className="gcol-xxl-6 gcol-xl-6 gcol-lg-6 gcol-md-8 gcol-sm-12 gcol-xs-12">
+      <div className="subtitle">FAQ (all selected and visible) + details and summary tag </div>
       <Faq />
     </div>
     <div className="gcol-xxl-6 gcol-xl-6 gcol-lg-6 gcol-md-8 gcol-sm-12 gcol-xs-12">
-      <div className="subtitle">Typographie custom</div>
-      <h1>Title heading 1</h1>
-      <h2>Subtitle heading 2</h2>
-      <h3>Title level  3</h3>
-      <h4>Title level 4</h4>
-      <h5>Title level 5</h5>
-      <h6>Title last 6</h6>
+      <div className="subtitle">Accordion (once selected and visible) + css todo</div>
+      <Accordion />
     </div>
     <div className="gcol-xxl-6 gcol-xl-6 gcol-lg-6 gcol-md-4 gcol-sm-12 gcol-xs-12">
       <div className="subtitle">Alert Boostrap</div>
@@ -119,6 +119,9 @@ export function Home() {
       <Alert type="warning">
         A simple warning alert—check it out!
       </Alert>
+    </div>
+    <div className="gcol-xxl-6 gcol-xl-6 gcol-lg-6 gcol-md-4 gcol-sm-12 gcol-xs-12">
+      <div className="subtitle">Toast</div>
     </div>
 
   </div>
