@@ -18,6 +18,7 @@ import { Footer } from "./Layouts/Footer.jsx";
 
 import { ScrollTop } from "./Components/Navigation/ScrollTop.jsx";
 import A4Animation from "./Components/Animation/A4Layout.jsx";
+import { Filter } from "./Pages/Filter.jsx";
 
 const router = createBrowserRouter([
   {
@@ -79,6 +80,10 @@ const router = createBrowserRouter([
       {
         path: "scroll",
         element: <Scroll />
+      },
+      {
+        path: "filter",
+        element: <Filter />
       },
       {
         path: "contact",

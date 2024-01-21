@@ -47,6 +47,9 @@ export function Header({ page }) {
                 <NavLink className={activeClassIf(page === 'scroll', 'nav-link')} to="/scroll">Scroll</NavLink>
               </li>
               <li className="nav-item">
+                <NavLink className={activeClassIf(page === 'filter', 'nav-link')} to="/filter">Filter</NavLink>
+              </li>
+              <li className="nav-item">
                 <NavLink className={activeClassIf(page === 'contact', 'nav-link')} to="/contact">Contact</NavLink>
               </li>
 
