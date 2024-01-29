@@ -6,8 +6,10 @@ export default function RedoAnimText({ delay }) {
   const textIndex = useMotionValue(0);
 
   const texts = [
-    "le Framework REACT",
-    "le Prépocesseur SASS & l'architecture 7-1",
+    "Vite : The Next Generation Frontend Tooling",
+    "le Framework REACT version 18",
+    "le Prépocesseur SASS",
+    "avec l'architecture 7-1",
     "la Méthodologie BEM pour le CSS",
     "... "
   ];

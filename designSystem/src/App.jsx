@@ -1,6 +1,4 @@
 import {
-  NavLink,
-
   createBrowserRouter,
   Outlet,
   RouterProvider,
@@ -17,8 +15,8 @@ import { Footer } from "./Layouts/Footer.jsx";
 
 
 import { ScrollTop } from "./Components/Navigation/ScrollTop.jsx";
-import A4Animation from "./Components/Animation/A4Layout.jsx";
 import { Filter } from "./Pages/Filter.jsx";
+import { Prototype } from "./Pages/Prototype.jsx";
 
 const router = createBrowserRouter([
   {
@@ -29,22 +27,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '',
-        element: <div>
-          <h1>Projet  </h1>
-          <p>est réalisé avec avec les technologies suivantes : <strong><A4Animation /></strong></p>
-
-
-          <div>
-            <h2>Components</h2>
-            <NavLink to="/home">Home</NavLink>
-
-          </div>
-          <div>
-            <h2>API JSON</h2>
-            <NavLink to="/weather">Weather</NavLink>
-
-          </div>
-        </div>
+        element: <Prototype />
       },
       {
         path: "home",
