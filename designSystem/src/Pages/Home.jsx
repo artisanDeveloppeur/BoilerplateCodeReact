@@ -3,6 +3,7 @@ import { Card } from "../Components/ContentDisplay/Card";
 import { Carousel } from "../Components/ContentDisplay/Carousel";
 import { Faq } from "../Components/ContentDisplay/Faq";
 import { Alert } from "../Components/Feedback/Alert";
+import { Tab } from "../Components/Navigation/Tabs/Tab";
 
 const slidesCarousel = [
   {
@@ -95,6 +96,7 @@ export function Home() {
     </div>
     <div className="gcol-xxl-12 gcol-xl-12 gcol-lg-12 gcol-md-12 gcol-sm-12 gcol-xs-12">
       <div className="subtitle">Tabs</div>
+      <Tab />
     </div>
     <div className="gcol-xxl-6 gcol-xl-6 gcol-lg-6 gcol-md-8 gcol-sm-12 gcol-xs-12">
       <div className="subtitle">FAQ (all selected and visible) + details and summary tag </div>

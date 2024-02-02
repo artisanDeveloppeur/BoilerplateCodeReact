@@ -1,0 +1,46 @@
+.tab__header {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.tab__header li {
+  cursor: pointer;
+  padding: 2rem;
+  text-align: center;
+
+}
+
+.tab__container {}
+
+.tab__content {
+  padding: 2rem;
+  min-height: 10rem;
+  background: #fff;
+}
+
+
+.tab__content p {}
+
+.active {
+  text-transform: uppercase;
+  background-color: #fff;
+  color: #413f3f;
+}
+
+@media screen and (max-width: 500px) {
+
+  .tab__header {
+    flex-direction: column;
+  }
+
+  .tab__content {}
+
+  .tab__header li {}
+
+  .tab__container {}
+
+
+
+  .tab__content p {}
+}

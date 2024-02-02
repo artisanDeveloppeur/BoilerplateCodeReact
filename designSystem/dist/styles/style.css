@@ -1351,6 +1351,35 @@ content {
   color: #222222;
 }
 
+.tab__header {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.tab__header li {
+  cursor: pointer;
+  padding: 2rem;
+  text-align: center;
+}
+
+.tab__content {
+  padding: 2rem;
+  min-height: 10rem;
+  background: #fff;
+}
+
+.active {
+  text-transform: uppercase;
+  background-color: #fff;
+  color: #413f3f;
+}
+
+@media screen and (max-width: 500px) {
+  .tab__header {
+    flex-direction: column;
+  }
+}
 /*
 .hero {
   height: 600px;
