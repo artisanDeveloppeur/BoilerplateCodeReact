@@ -1361,18 +1361,18 @@ content {
   cursor: pointer;
   padding: 2rem;
   text-align: center;
+  color: grey;
+}
+.tab__header li.active {
+  text-transform: uppercase;
+  background-color: #fff;
+  color: black;
 }
 
 .tab__content {
   padding: 2rem;
   min-height: 10rem;
   background: #fff;
-}
-
-.active {
-  text-transform: uppercase;
-  background-color: #fff;
-  color: #413f3f;
 }
 
 @media screen and (max-width: 500px) {
