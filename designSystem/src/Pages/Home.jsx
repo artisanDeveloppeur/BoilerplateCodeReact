@@ -3,6 +3,7 @@ import { Card } from "../Components/ContentDisplay/Card";
 import { Carousel } from "../Components/ContentDisplay/Carousel";
 import { Faq } from "../Components/ContentDisplay/Faq";
 import { Alert } from "../Components/Feedback/Alert";
+import { ProgressBar } from "../Components/Feedback/ProgressBar";
 import { Tab } from "../Components/Navigation/Tabs/Tab";
 
 const slidesCarousel = [
@@ -123,6 +124,8 @@ export function Home() {
     </div>
     <div className="gcol-xxl-6 gcol-xl-6 gcol-lg-6 gcol-md-4 gcol-sm-12 gcol-xs-12">
       <div className="subtitle">Toast</div>
+      <ProgressBar />
+
     </div>
 
   </div>
